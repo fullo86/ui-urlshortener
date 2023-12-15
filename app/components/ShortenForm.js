@@ -3,7 +3,7 @@ import { useRouter } from "next/navigation";
 import { ChangeEvent, FormEvent, useState } from "react";
 
 async function createUrl(url) {
-  const res = await fetch(`${window.location.origin}/url-generate`, {
+  const res = await fetch(`${process.env.NEXT_PUBLIC_API_URL}/url-generate`, {
     method: "POST",
     headers: {
       "content-type": "application/json",
